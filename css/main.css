@@ -368,3 +368,14 @@ left: 960px;
     border-bottom-right-radius: 20px;
   }
 }
+
+@media only screen and (max-width: 800px) {
+  nav, .block,.features, .products, img {
+    display: none;
+  }
+
+  .mobile {
+    text-align: center;
+    display: block !important;
+  }
+}
