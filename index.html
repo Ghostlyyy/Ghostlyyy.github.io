@@ -11,7 +11,6 @@
   <link rel="stylesheet" type="text/css" href="css/index.css" media="screen" />
   <script type="text/javascript" src="./index.js"></script>
 
-  <title>ghost <3</title>
   <!-- Facebook Meta Tags -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="ghost." />
@@ -46,40 +45,39 @@
 <audio id="music" loop="loop" src="audio/anxiety freestyle.mp3"></audio>
 </div>
 
-
 <script language=javascript>
   var rev = "fwd";
   function titlebar(val){
-      var msg  = "ghost <3";
-      var res = " ";
-      var speed = 100;
-      var pos = val;
-      msg = "   |-"+msg+"-|";
-      var le = msg.length;
-      if(rev == "fwd"){
-          if(pos < le){
-              pos = pos+1;
-              scroll = msg.substr(0,pos);
-              document.title = scroll;
-              timer = window.setTimeout("titlebar("+pos+")",speed);
-          }
+    var msg  = "ghost <3";
+    var res = " ";
+    var speed = 100;
+    var pos = val;
+     msg = "   |-"+msg+"-|";
+     var le = msg.length;
+     if(rev == "fwd"){
+         if(pos < le){
+             pos = pos+1;
+             scroll = msg.substr(0,pos);
+             document.title = scroll;
+             timer = window.setTimeout("titlebar("+pos+")",speed);
+         }
           else {
-              rev = "bwd";
-              timer = window.setTimeout("titlebar("+pos+")",speed);
-          }
-      }
-      else {
-          if(pos > 0) {
-              pos = pos-1;
-              var ale = le-pos;
-              scrol = msg.substr(ale,le);
-              document.title = scrol;
-              timer = window.setTimeout("titlebar("+pos+")",speed);
-          }
-          else {
-              rev = "fwd";
-              timer = window.setTimeout("titlebar("+pos+")",speed);
-          }
+             rev = "bwd";
+             timer = window.setTimeout("titlebar("+pos+")",speed);
+         }
+    }
+     else {
+         if(pos > 0) {
+             pos = pos-1;
+             var ale = le-pos;
+             scrol = msg.substr(ale,le);
+             document.title = scrol;
+             timer = window.setTimeout("titlebar("+pos+")",speed);
+         }
+         else {
+             rev = "fwd";
+             timer = window.setTimeout("titlebar("+pos+")",speed);
+         }
       }
   }
   titlebar(0);
